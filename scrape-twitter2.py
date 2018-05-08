@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def my_site():
+    Scraping().scrape(0)
     return render_template("wheresMarianne.html")
 
     #@app.route('/', methods=['POST'])
@@ -24,7 +25,7 @@ def my_site():
     #    return "<h1>Plagiarism Detected !</h1>"
     #else :
     #    return "<h1>No Plagiarism Detected !</h1>"
-    return Scraping().scrape(0)
+    #return Scraping().scrape(0)
 
 if __name__ == '__main__':
     app.run()
